@@ -1,9 +1,15 @@
 package demo;
 
-public class thread1 {
+public class thread1 extends Thread {
+	
+	public void run() {
+		System.out.println("Thread 1");
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		thread1 t1 = new thread1();
+		t1.start();
 
 	}
 
