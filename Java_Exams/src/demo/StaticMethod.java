@@ -3,8 +3,6 @@ package demo;
 public class StaticMethod {
 	int i =0;
 	static String s = "Vaari";
-	
-
 	public  StaticMethod() {
 		
 	}
@@ -17,14 +15,9 @@ public class StaticMethod {
 	{
 		System.out.println("Initialized i with "+ i + s );
 	}
-	
-
 	public static void main(String[] args) {
 		update();
 		StaticMethod s1 = new StaticMethod();
 		s1.display();
-		
-
 	}
-
 }
