@@ -6,6 +6,7 @@ class stop2 extends Thread{
 		{
 			System.out.println("Thread 2 :"+i);
 		}
+		System.out.println("Exit from thread 2");
 	}
 	
 
