@@ -11,9 +11,9 @@ public class withoutStatic {
 	
 
 	public static void main(String[] args) {
-		withoutStatic c1 = new withoutStatic();
-		withoutStatic c2 = new withoutStatic();
-		withoutStatic c3 = new withoutStatic();
+		withoutStatic c1 = new withoutStatic();//1
+		withoutStatic c2 = new withoutStatic();//1
+		withoutStatic c3 = new withoutStatic();//1
 		
 		
 		
