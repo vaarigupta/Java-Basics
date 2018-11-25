@@ -10,7 +10,8 @@ public class StringImmutable {
 		System.out.println(s1);
 		String a = new String("Hello");
 		a.concat("WORLD");
-		System.out.println("BEFORE " + a);
-		
+		System.out.println("Before assignment  : " + a);
+		a = a.concat("WORLD");
+		System.out.println("After assignment : " + a);
 	}
 }
