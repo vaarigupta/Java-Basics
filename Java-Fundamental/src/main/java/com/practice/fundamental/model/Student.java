@@ -1,21 +1,21 @@
 package com.practice.fundamental.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
-
     private String name;
-    private int age;
-    private String grade;
+    private int gradeLevel;
+    private double gpa;
     private String gender;
+    List<String> activities = new ArrayList<>();
 
-    public Student() {
-        // Default constructor
-    }
-
-    public Student(String name, int age, String grade, String gender) {
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
-        this.age = age;
-        this.grade = grade;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
         this.gender = gender;
+        this.activities = activities;
     }
 
     public String getGender() {
@@ -34,19 +34,42 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getGradeLevel() {
+        return gradeLevel;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setGradeLevel(int gradeLevel) {
+        this.gradeLevel = gradeLevel;
     }
 
-    public String getGrade() {
-        return grade;
+    public double getGpa() {
+        return gpa;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
     }
+
+
+
+    public List<String> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(List<String> activities) {
+        this.activities = activities;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
+                ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                '}';
+    }
+
+
 }

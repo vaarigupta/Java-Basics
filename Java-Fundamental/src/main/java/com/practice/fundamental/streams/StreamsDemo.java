@@ -1,7 +1,7 @@
 package com.practice.fundamental.streams;
 
-import com.practice.fundamental.data.StudentDB;
-import com.practice.fundamental.model.Student;
+import com.practice.fundamental.data.PersonDB;
+import com.practice.fundamental.model.Person;
 
 import java.util.Map;
 import java.util.function.Predicate;
@@ -11,19 +11,19 @@ public class StreamsDemo {
 
     public static void main(String[] args) {
 
-        Predicate<Student> studentPredicate = student -> student.getAge()>20;
+        Predicate<Person> studentPredicate = student -> student.getAge()>20;
 
-        Map<String,String> studentGradesMap = StudentDB.getAllStudents()
+        Map<String,String> studentGradesMap = PersonDB.getAllPersons()
                 .stream()
-                .collect(Collectors.toMap(Student::getName, Student::getGrade));
+                .collect(Collectors.toMap(Person::getName, Person::getGrade));
 
-        System.out.println("Student Grades Map: " + studentGradesMap);
+        System.out.println("Person Grades Map: " + studentGradesMap);
 
-        Map<String,Integer> studentGradesMap1 = StudentDB.getAllStudents()
+        Map<String,Integer> studentGradesMap1 = PersonDB.getAllPersons()
                 .stream()
                 .filter(studentPredicate)
-                .collect(Collectors.toMap(Student::getName, Student::getAge));
+                .collect(Collectors.toMap(Person::getName, Person::getAge));
 
-        System.out.println("Student Grades Map using filter: " + studentGradesMap1);
+        System.out.println("Person Grades Map using filter: " + studentGradesMap1);
     }
 }
