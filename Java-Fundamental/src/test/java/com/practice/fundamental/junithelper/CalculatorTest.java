@@ -1,5 +1,6 @@
 package com.practice.fundamental.junithelper;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +19,13 @@ class CalculatorTest {
     @BeforeEach
     void setUp(){
         calculator = new Calculator();
+    }
+
+    // This method can be used to clean up resources or reset states after each test.
+    // For example, you can set the calculator object to null if needed.
+    @AfterEach
+    void tearDown(){
+        calculator = null;
     }
     /**
      * JUnit 5 Test class for Calculator
