@@ -19,6 +19,7 @@ class CalculatorTest {
     @BeforeEach
     void setUp(){
         calculator = new Calculator();
+        System.out.println("Setting up the Calculator instance for each test.");
     }
 
     // This method can be used to clean up resources or reset states after each test.
@@ -26,6 +27,7 @@ class CalculatorTest {
     @AfterEach
     void tearDown(){
         calculator = null;
+        System.out.println("Cleaning up Calculator instance after each test.");
     }
     /**
      * JUnit 5 Test class for Calculator
@@ -38,6 +40,7 @@ class CalculatorTest {
        // Calculator calculator = new Calculator();
         int actualResult =  calculator.add(10,20);
         assertEquals(30,actualResult);
+        System.out.println("Add test passed: 10 + 20 = " + actualResult);
     }
 
     @Test
@@ -46,6 +49,7 @@ class CalculatorTest {
         //Calculator calculator = new Calculator();
         int actualResult =  calculator.subtract(20,10);
         assertEquals(10,actualResult);
+        System.out.println("Subtract test passed: 20 - 10 = " + actualResult);
     }
 
     @Test
@@ -54,6 +58,7 @@ class CalculatorTest {
         //Calculator calculator = new Calculator();
         int actualResult =  calculator.multiply(10,20);
         assertEquals(200,actualResult);
+        System.out.println("Multiply test passed: 10 * 20 = " + actualResult);
     }
 
     @Test
@@ -62,5 +67,6 @@ class CalculatorTest {
         //Calculator calculator = new Calculator();
         int actualResult =  calculator.divide(20,10);
         assertEquals(2,actualResult);
+        System.out.println("Divide test passed: 20 / 10 = " + actualResult);
     }
 }
