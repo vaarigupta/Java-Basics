@@ -19,6 +19,7 @@ class CalculatorTest {
     @BeforeEach
     void setUp(){
         calculator = new Calculator();
+        System.out.println("-------------------------------------");
         System.out.println("Setting up the Calculator instance for each test.");
     }
 
@@ -28,6 +29,7 @@ class CalculatorTest {
     void tearDown(){
         calculator = null;
         System.out.println("Cleaning up Calculator instance after each test.");
+        System.out.println("-------------------------------------");
     }
     /**
      * JUnit 5 Test class for Calculator

@@ -1,9 +1,6 @@
 package com.practice.fundamental.junithelper;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,9 +15,17 @@ public class CalculatorBeforeAllTest {
     @BeforeAll
     static void setUpAll() {
         calculator = new Calculator();
-        System.out.println("Setting up resources before all tests.");
+        System.out.println("Setting up Calculator instance before all tests.");
+        System.out.println("-------------------------------------");
     }
-    
+
+    @AfterAll
+    static void tearDownAll() {
+        calculator = null;
+        System.out.println("-------------------------------------");
+        System.out.println("Cleaning up Calculator instance after all tests.");
+    }
+
     /**
      * JUnit 5 Test class for Calculator
      * This class contains test methods for the Calculator class.
