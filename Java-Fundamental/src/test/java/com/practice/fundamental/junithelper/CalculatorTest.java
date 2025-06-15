@@ -1,12 +1,11 @@
 package com.practice.fundamental.junithelper;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CalculatorTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class CalculatorTest {
 
 
     private Calculator calculator;
@@ -36,6 +35,7 @@ class CalculatorTest {
      * This class contains test methods for the Calculator class.
      * Each method tests a specific operation of the Calculator.
      */
+    @Order(1)
     @Test
     public void addTest(){
 
@@ -45,6 +45,7 @@ class CalculatorTest {
         System.out.println("Add test passed: 10 + 20 = " + actualResult);
     }
 
+    @Order(2)
     @Test
     public void subtractTest(){
 
@@ -54,6 +55,7 @@ class CalculatorTest {
         System.out.println("Subtract test passed: 20 - 10 = " + actualResult);
     }
 
+    @Order(3)
     @Test
     public void multiplyTest(){
 
@@ -63,6 +65,7 @@ class CalculatorTest {
         System.out.println("Multiply test passed: 10 * 20 = " + actualResult);
     }
 
+    @Order(4)
     @Test
     public void divideTest(){
 
