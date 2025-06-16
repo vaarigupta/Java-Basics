@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 
+import static com.practice.fundamental.functionalInterface.FunctionExample.performConcatenation;
+import static com.practice.fundamental.functionalInterface.FunctionExample.performToUpperCase;
+
 public class PredicateAndConsumerExample {
 
     static Predicate<Student> isGradeLevelGreaterThan3 = student -> student.getGradeLevel()>=3;
@@ -29,5 +32,13 @@ public class PredicateAndConsumerExample {
 
     public static void main(String[] args) {
         printStudentsBasedOnGradeandGpa();
+        System.out.println("-----------------------------------");
+        // Example usage of Function
+        String name = performToUpperCase.apply("vaari");
+        System.out.println("Uppercase Name: " + name);
+        System.out.println("-----------------------------------");
+
+        String concatenatedName = performConcatenation.apply("vaari");
+        System.out.println("Concatenated Name: " + concatenatedName);
     }
 }
