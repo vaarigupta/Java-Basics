@@ -18,6 +18,18 @@ public class Student {
         this.activities = activities;
     }
 
+    public Student() {
+
+    }
+
+    public Student(Student student) {
+        this.name = student.getName();
+        this.gradeLevel = student.getGradeLevel();
+        this.gpa = student.getGpa();
+        this.gender = student.getGender();
+        this.activities = student.getActivities();
+    }
+
     public String getGender() {
         return gender;
     }
@@ -56,10 +68,14 @@ public class Student {
         return activities;
     }
 
+
     public void setActivities(List<String> activities) {
         this.activities = activities;
     }
 
+    public void printActivities() {
+        System.out.println("Activities: " + activities);
+    }
     @Override
     public String toString() {
         return "Student{" +
