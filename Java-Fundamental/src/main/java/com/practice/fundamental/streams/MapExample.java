@@ -14,25 +14,24 @@ public class MapExample {
 
     public static List<String> getStudentNamesList(){
 
-        return StudentDataBase.getAllStudents().stream()
-                .map(Student::getName)
-                .collect(toList());
+        return StudentDataBase.getAllStudents().stream()  //Stream of Students(Stream<Student>)
+                .map(Student::getName)  //getting student as the input and returning the student name as output (Stream<String>)
+                .collect(toList()); //collecting the stream of student names into a List (List<String>)
     }
 
     public static List<String> getStudentNamesListWithUpperCase(){
 
-        return StudentDataBase.getAllStudents().stream()
-                .map(Student::getName)
-                .map(String::toUpperCase)
-                .collect(toList());
+        return StudentDataBase.getAllStudents().stream() //Stream of Students(Stream<Student>)
+                .map(Student::getName) //getting student as the input and returning the student name as output (Stream<String>)
+                .map(String::toUpperCase) //converting each student name to upper case (Stream<String>)
+                .collect(toList()); //collecting the stream of student names into a List (List<String>)
     }
 
     public static Set<String> getStudentNamesSet(){
 
-        return StudentDataBase.getAllStudents()
-                .stream()
-                .map(Student::getName)
-                .collect(toSet());
+        return StudentDataBase.getAllStudents().stream() //Stream of Students(Stream<Student>)
+                .map(Student::getName) //getting student as the input and returning the student name as output (Stream<String>)
+                .collect(toSet()); //collecting the stream of student names into a Set (Set<String>)
     }
     public static void main(String[] args) {
 

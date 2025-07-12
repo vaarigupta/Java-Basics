@@ -12,10 +12,10 @@ public class FlatMapExample {
     public  static List<String> getStudentActivities(){
 
         // Using flatMap to get a list of all activities from all students
-       return StudentDataBase.getAllStudents().stream()
-                .map(Student::getActivities)
-                .flatMap(List::stream)
-                .collect(toList());
+       return StudentDataBase.getAllStudents().stream()//making a stream of students (Stream<Student>)
+                .map(Student::getActivities)//getting the activities of each student (Stream<List<String>>)
+                .flatMap(List::stream) //flattening the stream of lists of activities into a single stream of activities (Stream<String>)
+                .collect(toList()); //collecting the stream of activities into a List (List<String>)
     }
     public static void main(String[] args) {
 
