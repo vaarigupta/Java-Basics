@@ -5,6 +5,8 @@ import java.util.Optional;
 
 public class MaxReduceExample {
 
+    // The reduce() method is a terminal operation that performs a reduction on the elements of the stream using an associative accumulation function and returns an Optional.
+    // This method finds the maximum element in a list of integers using reduce with an identity value.
     public static int findMaxElement(List<Integer> integerList){
         return integerList
                 .stream()

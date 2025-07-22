@@ -9,6 +9,7 @@ import static java.util.stream.Collectors.toList;
 
 public class FlatMapExample {
 
+    // flatMap() is an intermediate operation that flattens a stream of collections into a single stream of elements.
     public  static List<String> getStudentActivities(){
 
         // Using flatMap to get a list of all activities from all students

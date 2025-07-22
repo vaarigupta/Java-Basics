@@ -5,6 +5,8 @@ import java.util.Optional;
 
 public class MinReduceExample {
 
+    //reduce() is a terminal operation that performs a reduction on the elements of the stream using an associative accumulation function and returns an Optional describing the reduced value, if any.
+    // This method finds the minimum element in a list of integers using reduce with an identity value.
     public static int findMinElement(List<Integer> integerList) {
         return integerList
                 .stream()

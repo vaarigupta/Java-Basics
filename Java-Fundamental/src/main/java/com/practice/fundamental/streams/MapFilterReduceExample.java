@@ -7,6 +7,7 @@ import java.util.List;
 
 public class MapFilterReduceExample {
 
+    // This class demonstrates the use of map, filter, and reduce operations on a stream of students.
     public static int countStudentActivities(){
 
         return StudentDataBase.getAllStudents()

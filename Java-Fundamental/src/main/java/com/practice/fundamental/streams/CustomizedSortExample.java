@@ -10,6 +10,9 @@ import static java.util.stream.Collectors.toList;
 
 public class CustomizedSortExample {
 
+    //sorted() is a terminal operation that sorts the elements of the stream based on the provided comparator.
+    //Comparators are used to define the order in which elements should be sorted.
+    //Comparator.comparing() is a static method that creates a comparator based on the specified key extractor function.
     public static List<Student> sortStudentsByName() {
         // Implementation for sorting students by name
 

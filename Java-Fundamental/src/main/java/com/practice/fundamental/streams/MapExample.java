@@ -12,6 +12,7 @@ import static java.util.stream.Collectors.toSet;
 
 public class MapExample {
 
+    //map() is an intermediate operation that transforms each element of the stream using a provided function to produce a new stream of elements of a different type.
     public static List<String> getStudentNamesList(){
 
         return StudentDataBase.getAllStudents().stream()  //Stream of Students(Stream<Student>)

@@ -9,6 +9,7 @@ import static java.util.stream.Collectors.toList;
 
 public class FilterExample {
 
+    //filter() is an intermediate operation that filters elements of the stream based on a given predicate.
     public static List<Student> filterStudentsByGender(){
 
      return StudentDataBase.getAllStudents().stream() // Stream of Students (Stream<Student>)

@@ -9,6 +9,8 @@ import static java.util.stream.Collectors.toList;
 
 public class DistinctCountSortExample {
 
+    //distinct() is an intermediate operation that filters out duplicate elements from the stream.
+    //collect() is a terminal operation that collects the elements of the stream into a collection, such as a List or Set.
     public static List<String> getStudentActivities(){
 
        return StudentDataBase.getAllStudents().stream()
@@ -18,6 +20,7 @@ public class DistinctCountSortExample {
                 .collect(toList());
     }
 
+    //count() is a terminal operation that returns the number of elements in the stream.
     public static long getStudentActivitiesCount(){
 
         return StudentDataBase.getAllStudents().stream()
@@ -27,6 +30,7 @@ public class DistinctCountSortExample {
                 .count();
     }
 
+    //sorted() is a intermediate operation that sorts the elements of the stream in natural order or according to a specified comparator.
     public static List<String> getSortedStudentActivities(){
 
         return StudentDataBase.getAllStudents().stream()
