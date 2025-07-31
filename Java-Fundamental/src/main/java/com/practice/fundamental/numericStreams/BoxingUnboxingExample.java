@@ -19,7 +19,7 @@ public class BoxingUnboxingExample {
     //converts a List<Integer> to an intStream using mapToInt then sums the values
     public static int unboxing(List<Integer> numbers){
         return numbers
-                .stream()
+                .stream() // creates a Stream<Integer> from the List<Integer>
                 .mapToInt(Integer::intValue) // converts each Integer to int and returns an IntStream
                 .sum();
     }
