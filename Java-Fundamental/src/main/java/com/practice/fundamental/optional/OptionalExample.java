@@ -5,7 +5,7 @@ import com.practice.fundamental.model.Student;
 
 import java.util.Optional;
 
-public class optionalExample {
+public class OptionalExample {
 
     public static Optional<String> getStudentName(){
 
