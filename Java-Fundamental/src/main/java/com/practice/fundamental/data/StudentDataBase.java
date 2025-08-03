@@ -1,15 +1,25 @@
 package com.practice.fundamental.data;
 
+import com.practice.fundamental.model.Bike;
 import com.practice.fundamental.model.Student;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class StudentDataBase {
 
 
-    public static Supplier<Student> studentSupplier = () -> new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+    public static Supplier<Student> studentSupplier = () -> {
+
+        Optional<Bike> bike = Optional.of(new Bike("Yamaha",  "Red"));
+        Student student = new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+        student.setBike(bike);
+        return student;
+
+    };
+
     /**
      * Total of 6 students in the database.
      * @return

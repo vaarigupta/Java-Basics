@@ -2,6 +2,7 @@ package com.practice.fundamental.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
     private String name;
@@ -10,6 +11,10 @@ public class Student {
     private String gender;
     List<String> activities = new ArrayList<>();
     private int noteBooks;
+    private Optional<Bike> bike;
+
+    public Student() {}
+
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
         this.gradeLevel = gradeLevel;
@@ -18,11 +23,6 @@ public class Student {
         this.activities = activities;
     }
 
-
-
-    public Student() {
-
-    }
 
     public Student(Student student) {
         this.name = student.getName();
@@ -39,6 +39,14 @@ public class Student {
         this.gender = gender;
         this.activities = activities;
         this.noteBooks = noteBooks;
+    }
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
     }
 
     public int getNoteBooks() {
@@ -80,8 +88,6 @@ public class Student {
         this.gpa = gpa;
     }
 
-
-
     public List<String> getActivities() {
         return activities;
     }
@@ -104,6 +110,7 @@ public class Student {
                 ", gender='" + gender + '\'' +
                 ", activities=" + activities +
                 ", noteBooks=" + noteBooks +
+                ", bike=" + bike +
                 '}';
     }
 }
