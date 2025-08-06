@@ -24,6 +24,15 @@ public class GroupingByExampleTwoLevel {
         System.out.println(students);
     }
 
+    public static void groupingByGradeLevelAndNotebooks(){
+
+        Map<Integer,Integer> students = StudentDataBase.getAllStudents()
+                .stream()
+                .collect(Collectors.groupingBy(Student::getGradeLevel,
+                        Collectors.summingInt(Student::getNoteBooks)));
+
+        System.out.println(students);
+    }
     public static void groupingByNameAndCountOfNotebooks(){
 
         Map<String,Integer> students = StudentDataBase.getAllStudents()
@@ -37,5 +46,7 @@ public class GroupingByExampleTwoLevel {
         groupingByGradelevelandGpa();
         System.out.println("---------------------------------");
         groupingByNameAndCountOfNotebooks();
+        System.out.println("---------------------------------");
+        groupingByGradeLevelAndNotebooks();
     }
 }
