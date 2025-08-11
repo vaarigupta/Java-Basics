@@ -16,15 +16,13 @@ public class MinByMaxByExample
 
         return StudentDataBase.getAllStudents()
                 .stream()
-                .collect(minBy(Comparator
-                        .comparing(Student::getGpa)));
+                .collect(minBy(Comparator.comparing(Student::getGpa)));
     }
 
     public static Optional<Student> getStudentMaxGpa(){
         return StudentDataBase.getAllStudents()
                 .stream()
-                .collect(maxBy(Comparator
-                        .comparing(Student::getGpa)));
+                .collect(maxBy(Comparator.comparing(Student::getGpa)));
     }
     public static void main(String[] args) {
 
