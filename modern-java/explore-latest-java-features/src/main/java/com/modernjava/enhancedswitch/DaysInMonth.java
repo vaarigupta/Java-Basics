@@ -51,4 +51,15 @@ public class DaysInMonth {
             default -> 31;
         };
     }
+
+    // This is the exhaustive nature of the switch expression
+    // we don't need a default case if we have covered all the cases
+    //here we have covered all the months so, switch expression is complete, it won't show any warning like a regular switch statement
+    public static int getDaysV3(Month month, int year){
+        return switch(month){
+          case APRIL, JUNE, SEPTEMBER, NOVEMBER -> 30;
+          case FEBRUARY -> Year.isLeap(year) ? 29 : 28;
+          case JANUARY, MARCH, MAY, JULY, AUGUST, OCTOBER, DECEMBER -> 31;
+        };
+    }
 }

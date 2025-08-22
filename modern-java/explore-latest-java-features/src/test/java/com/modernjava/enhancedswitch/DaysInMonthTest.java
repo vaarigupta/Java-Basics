@@ -23,7 +23,16 @@ class DaysInMonthTest {
     @ParameterizedTest
     @MethodSource("input")
     void getDaysV2(Month month, int expectedNoOfDays) {
+        // Testing the enhanced switch expression method
         int days = DaysInMonth.getDaysV2(month, 2025);
+        assertEquals(expectedNoOfDays, days);
+    }
+
+    @ParameterizedTest
+    @MethodSource("input")
+    void getDaysV3(Month month, int expectedNoOfDays) {
+        // Testing the exhaustive switch expression method
+        int days = DaysInMonth.getDaysV3(month, 2025);
         assertEquals(expectedNoOfDays, days);
     }
 
